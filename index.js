@@ -73,8 +73,6 @@ var handleRequest = function(request, response)
 			controllerInstance.process(request, response, jsonData, sendResult);
 		});
 	}
-	
-	response.end();
 }
 
 // Start listening!
