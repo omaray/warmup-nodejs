@@ -26,7 +26,7 @@ var sendResult = function(response, errorCode)
 	jsonResult["errCode"] = errorCode;
 	if (errorCode >= constants.SUCCESS)
 	{
-		console.log("writing the count: " + errorCode);
+		console.log("Code: sendingResult(): Writing the count: " + errorCode);
 		jsonResult["count"] = errorCode;
 	}
 	
