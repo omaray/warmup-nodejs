@@ -17,10 +17,10 @@ dataaccess.prototype.query = function(queryString, callback)
 	// Connection to the database
 	var connection = mysql.createConnection(
 	{
-		host: 'localhost',
-		user: 'root',
-		password: '',
-		database: 'priyanode'
+		host: 'us-cdbr-east-05.cleardb.net',
+		user: 'b53206430c258b',
+		password: '57e48628',
+		database: 'heroku_c678bc4e748e650'
 	});
 
 	// Execute the query
