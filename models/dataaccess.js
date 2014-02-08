@@ -28,7 +28,7 @@ dataaccess.prototype.query = function(queryString, callback)
 	{
 		if (error)
 		{
-			console.log("Code: dataaccess.query(): An error was hit trying to execue the SQL query");
+			console.log("Code: dataaccess.query(): An error was hit trying to execute the SQL query");
 			console.log(error);
 		}
 		else
