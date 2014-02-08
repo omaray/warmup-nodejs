@@ -14,7 +14,7 @@ var controller = require("./controllers/controller.js");
 /*****************************************************************/
 var sendResult = function(response, errorCode)
 {
-	console.log("Sending the final result");
+	console.log("Code: sendResult(): Sending the final result");
 	
 	// Headers
 	var headers = {};
@@ -55,9 +55,8 @@ process.on("uncaughtException", function(error)
 /*****************************************************************/
 var handleRequest = function(request, response)
 {
-	console.log("Code: handleRequest() got called");
-	console.log(request.method);
-	console.log(request.url); // for example /users/login
+	console.log("Code: handleRequest(): Method requested: " + request.method);
+	console.log("Code: handleRequest(): URL in the request: " + request.url); // for example /users/login
 
 	if (request.method === "POST")
 	{
