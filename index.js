@@ -33,7 +33,7 @@ var sendResult = function(response, errorCode)
 	}
 	else
 	{
-		// The errorCode is true failure code
+		// The errorCode is the true failure code
 		jsonResult["errCode"] = errorCode;
 	}
 	
