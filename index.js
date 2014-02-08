@@ -75,6 +75,13 @@ var handleRequest = function(request, response)
 	}
 	else
 	{
+		// Headers
+		var headers = {};
+		headers["Connection"] = "close";
+		headers["Content-Type"] = "text/plain";
+
+		response.writeHead(200, headers);
+		response.write("Not HTML yet: use a POST request");
 		response.end();
 	}
 }
