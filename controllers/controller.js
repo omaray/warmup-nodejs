@@ -43,6 +43,10 @@ controller.prototype.process = function(request, response, jsonData, sendResult)
 				sendResult(response, errorCode);				
 			});
 		}
+		else
+		{
+			response.end();
+		}
 	}
 }
 

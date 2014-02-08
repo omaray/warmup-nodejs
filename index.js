@@ -81,7 +81,7 @@ var handleRequest = function(request, response)
 		headers["Content-Type"] = "text/plain";
 
 		response.writeHead(200, headers);
-		response.write("Not HTML yet: use a POST request");
+		response.write("No HTML yet: use a POST request");
 		response.end();
 	}
 }
