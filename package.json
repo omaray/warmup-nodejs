@@ -1,0 +1,15 @@
+{
+  "name": "warmup-nodejs2",
+  "version": "0.0.0",
+  "description": "Warmup project in nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Omar Develops",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "~2.0.1",
+    "nodeunit": "~0.8.4"
+  }
+}
