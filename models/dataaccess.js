@@ -23,11 +23,12 @@ dataaccess.prototype.query = function(queryString, callback)
 		database: 'heroku_c678bc4e748e650'
 	});
 
-	connection.query('CREATE TABLE users (username VARCHAR(255), password VARCHAR(255), count INT(11), PRIMARY KEY(username))', function(err){
-		if (err){
-			console.log('Could not create table "users".');
-		}
-	});
+	// Keeping this code around just to create the users table in case it's needed
+	// connection.query('CREATE TABLE users (username VARCHAR(255), password VARCHAR(255), count INT(11), PRIMARY KEY(username))', function(err){
+	// 	if (err){
+	// 		console.log('Could not create table "users".');
+	// 	}
+	// });
 
 	// Execute the query
 	connection.query(queryString, function(error, results, fields)
