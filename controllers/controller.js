@@ -45,6 +45,7 @@ controller.prototype.process = function(request, response, jsonData, sendResult)
 		}
 		else
 		{
+			// Simply close the connection
 			response.end();
 		}
 	}

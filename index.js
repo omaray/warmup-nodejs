@@ -23,11 +23,18 @@ var sendResult = function(response, errorCode)
 
 	// JSON result
 	var jsonResult = {};
-	jsonResult["errCode"] = errorCode;
 	if (errorCode >= constants.SUCCESS)
 	{
 		console.log("Code: sendResult(): Writing the count: " + errorCode);
+
+		// The errorCode is the count in this case
+		jsonResult["errCode"] = constants.SUCCESS;
 		jsonResult["count"] = errorCode;
+	}
+	else
+	{
+		// The errorCode is true failure code
+		jsonResult["errCode"] = errorCode;
 	}
 	
 	response.writeHead(200, "ALL Good!", headers);
