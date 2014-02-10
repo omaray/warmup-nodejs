@@ -64,6 +64,7 @@ users.prototype.login = function(username, password, callback)
 	var code = this.validate(username, password);
 	if (code != constants.SUCCESS)
 	{
+		code = constants.ERR_BAD_CREDENTIALS;
 		callback(code);
 		return;
 	}
