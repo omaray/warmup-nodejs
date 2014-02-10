@@ -7,41 +7,6 @@ var constants = require("./utilities/constants");
 var controller = require("./controllers/controller.js");
 
 /*****************************************************************/
-// FUNCTION: sendResult
-//
-// DESCRIPTION:
-// Returns the JSON result back to the client.
-/*****************************************************************/
-var sendResult = function(response, errorCode)
-{
-	console.log("Code: sendResult(): Sending the final result");
-	
-	// Headers
-	var headers = {};
-	headers["Connection"] = "close";
-	headers["Content-Type"] = "application/json";
-
-	// JSON result
-	var jsonResult = {};
-	if (errorCode >= constants.SUCCESS)
-	{
-		console.log("Code: sendResult(): Writing the count: " + errorCode);
-
-		// The errorCode is the count in this case
-		jsonResult["errCode"] = constants.SUCCESS;
-		jsonResult["count"] = errorCode;
-	}
-	else
-	{
-		// The errorCode is the true failure code
-		jsonResult["errCode"] = errorCode;
-	}
-	
-	response.writeHead(200, "ALL Good!", headers);
-	response.end(JSON.stringify(jsonResult));
-}
-
-/*****************************************************************/
 // EVENT HANDLER: uncaughtException
 //
 // DESCRIPTION:
@@ -77,7 +42,7 @@ var handleRequest = function(request, response)
 		{
 			var jsonData = JSON.parse(body);
 			var controllerInstance = new controller();
-			controllerInstance.process(request, response, jsonData, sendResult);
+			controllerInstance.process(request, response, jsonData);
 		});
 	}
 	else
